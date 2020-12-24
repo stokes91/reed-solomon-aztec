@@ -1,6 +1,6 @@
 {
   "name": "reed-solomon-aztec",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Reed Solomon decoder (and encoder) for Aztec Codes - JavaScript implementation",
   "main": "main.js",
   "directories": {
