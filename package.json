@@ -1,7 +1,7 @@
 {
-  "name": "reed-solomon-qr",
+  "name": "reed-solomon-aztec",
   "version": "1.1.4",
-  "description": "Reed Solomon decoder (and encoder) for QR Codes - JavaScript implementation",
+  "description": "Reed Solomon decoder (and encoder) for Aztec Codes - JavaScript implementation",
   "main": "main.js",
   "directories": {
     "example": "examples",
@@ -12,20 +12,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stokes91/reed-solomon-qr.git"
+    "url": "git+https://github.com/stokes91/reed-solomon-aztec.git"
   },
   "keywords": [
     "Reed",
     "Solomon",
     "Error",
     "Correction",
-    "QR",
+    "Aztec",
     "Code"
   ],
   "author": "Alexander Stokes",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/stokes91/reed-solomon-qr/issues"
+    "url": "https://github.com/stokes91/reed-solomon-aztec/issues"
   },
-  "homepage": "https://github.com/stokes91/reed-solomon-qr#readme"
+  "homepage": "https://github.com/stokes91/reed-solomon-aztec#readme"
 }
