@@ -14,23 +14,12 @@
    limitations under the License.
 */
 
-const ReedSolomonEncoder = require('./lib/ReedSolomonEncoder');
-const ReedSolomonDecoder = require('./lib/ReedSolomonDecoder');
-
-const {
-  GF16,
-  GF64,
-  GF256,
-  GF1024,
-  GF4096
-} = require('./lib/GaloisField');
+const FiniteField = require('rs-finite-field');
 
 module.exports = {
-  ReedSolomonEncoder,
-  ReedSolomonDecoder,
-  GF16,
-  GF64,
-  GF256,
-  GF1024,
-  GF4096
+  GF16: FiniteField(0x10, 0x13, 2),
+  GF64: FiniteField(0x40, 0x43, 2),
+  GF256: FiniteField(0x100, 0x12D, 2),
+  GF1024: FiniteField(0x400, 0x409, 2),
+  GF4096: FiniteField(0x1000, 0x1069, 2)
 };

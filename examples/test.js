@@ -20,11 +20,12 @@ const ERROR_BLOCKS_COUNT = 2;
 
 const crypto = require('crypto');
 
-const field = require('../main').GF16;
+const {
+  ReedSolomonDecoder,
+  ReedSolomonEncoder
+} = require('../main').GF16;
 
-const ReedSolomonDecoder = require('../main').ReedSolomonDecoder;
-
-const rse = require('../main').ReedSolomonEncoder.factory(field, BLOCKS_LENGTH - BLOCKS_DATA);
+const rse = ReedSolomonEncoder.factory(BLOCKS_LENGTH - BLOCKS_DATA);
 
 const startTime = (new Date).getTime();
 
@@ -72,7 +73,7 @@ for (let l = 5500; l--;) {
   //  - undefined if errors repaired
   //  - true if data could not be recovered
   //
-  const err = ReedSolomonDecoder(field, out, BLOCKS_LENGTH - BLOCKS_DATA);
+  const err = ReedSolomonDecoder(out, BLOCKS_LENGTH - BLOCKS_DATA);
 
   if (out.slice(0, BLOCKS_DATA).map(x => x.toString(16).padStart(1, '0')).join('') !== array.slice(0, BLOCKS_DATA).map(x => x.toString(16).padStart(1, '0')).join('')) {
     errorCount += 1;
